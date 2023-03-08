@@ -18,7 +18,7 @@ document.querySelector('.GitHubApi__input').addEventListener("click", (event) =>
 Next.addEventListener('click', ()=>{
     if(repos.total_count/10>Page.innerText){
         Page.innerText=Number(Page.innerText)+1
-        redirect(Page.innerText, mainInput.value)
+        fetchRepos('', Page.innerText)
     }
 })
 
