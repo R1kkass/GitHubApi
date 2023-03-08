@@ -10,10 +10,10 @@ async function fetchRepos(param) {
 
     const search = param || mainInput.value;
     mainInput.value=search
-    
+
     loaderShow();
     fetch(
-        `https://api.github.com/search/repositories?q=${search || ''}&page=${Page.innerText || 1}&per_page=10`
+        `https://api.github.com/search/repositories?q=${search || ''}&page=${Page?.innerText || 1}&per_page=10`
     )
     .then((e)=>{
         return e.json();
@@ -26,6 +26,7 @@ async function fetchRepos(param) {
         if(e.message){
             root.innerHTML=`<p>Ошибка</p>`
         }
+
     })
     .catch(()=>{
         root.innerHTML=`<p>Ошибка</p>`
