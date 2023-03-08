@@ -26,6 +26,7 @@ function renderSelect(filterArr) {
         createDiv2.innerHTML = arr[i];
         createDiv.appendChild(createDiv2);
         history.appendChild(createDiv);
+        
     }
 }
 

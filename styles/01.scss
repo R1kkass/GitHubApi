@@ -123,6 +123,9 @@ body{
         justify-content: center;
         margin: 0 auto;
         align-items: center;
+        p{
+            margin-top: 5px;
+        }
     }
     &__history{
         position: absolute;
@@ -156,6 +159,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
     button{
         background: none;
         color: white;

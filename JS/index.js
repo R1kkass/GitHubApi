@@ -19,14 +19,19 @@ async function fetchRepos(param) {
         return e.json();
     })
     .then((e)=>{
-        repos = e
-        render();
-        mainInput.style.boxShadow = "0 0 5px 1px gray";
-        loaderShow();
         if(e.message){
             root.innerHTML=`<p>Ошибка</p>`
+            document.querySelector('.Pagination').style.display='none'
+        }else{
+            repos = e
+            render();
+            mainInput.style.boxShadow = "0 0 5px 1px gray";
+            console.log(e);
+            if(e.items?.length){
+                document.querySelector('.Pagination').style.display='flex'
+            }
         }
-
+        loaderShow();
     })
     .catch(()=>{
         root.innerHTML=`<p>Ошибка</p>`
@@ -35,12 +40,13 @@ async function fetchRepos(param) {
 
 }
 
-root.innerHTML = "Введите поиск";
+root.innerHTML = "<p>Введите поиск</p>";
 
 function render() {
     root.innerHTML = "";
     if (repos.items?.length == 0) {
-        root.innerHTML = "Ничего не найдено";
+        root.innerHTML = "<p>Ничего не найдено</p>";
+        document.querySelector('.Pagination').style.display='none'
     }
     for (let i = 0; i < repos.items?.length; i++) {
         const reposDiv = document.createElement("div");

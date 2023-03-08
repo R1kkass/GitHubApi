@@ -119,6 +119,9 @@ body {
   margin: 0 auto;
   align-items: center;
 }
+.GitHubApi__reposList p {
+  margin-top: 5px;
+}
 .GitHubApi__history {
   position: absolute;
   z-index: 4;
@@ -150,6 +153,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 .Pagination button {
   background: none;
