@@ -1,15 +1,18 @@
+const searchDiv = document.querySelector(".GitHubApi__history")
+
+
 document
     .querySelector(".GitHubApi__input")
     .querySelector("input")
     .addEventListener("focus", (event) => {
         console.log("e");
-        document.querySelector(".GitHubApi__history").style.display = "flex";
+        searchDiv.style.display = "flex";
         background.style.display = "block";
         inputRender();
     });
 
 background.addEventListener("click", () => {
-    document.querySelector(".GitHubApi__history").style.display = "none";
+    searchDiv.style.display = "none";
     background.style.display = "none";
 });
 
@@ -33,3 +36,42 @@ Prev.addEventListener("click", () => {
         fetchRepos("", Page.innerText);
     }
 });
+
+
+addEventListener('keydown', (e)=>{
+    if(e.keyCode==27){
+        searchDiv.style.display = "none";
+        background.style.display = "none";
+        mainInput.blur()
+    }
+})
+
+addEventListener('keydown', (e)=>{
+    if(e.keyCode==13 && searchDiv.style.display == "flex"){
+        search()
+        mainInput.blur()
+    }
+})
+
+let i =0
+
+addEventListener('keydown', (e)=>{
+    if(e.keyCode==40 && searchDiv.style.display == "flex"){
+        const searchList = searchDiv.querySelectorAll('.UnitSearch')
+        mainInput.value = searchList[i].innerText;
+        searchList[i].classList = 'UnitSearch_hover'
+        console.log(searchList);
+        i++
+    }
+})
+
+addEventListener('keydown', (e)=>{
+    
+    if(e.keyCode==38 && searchDiv.style.display == "flex"){
+        const searchList = searchDiv.querySelectorAll('div')
+        searchList[i].classList = 'UnitSearch_hover'
+        mainInput.value = searchList[i].innerText;
+        console.log(i);
+        i--
+    }
+})

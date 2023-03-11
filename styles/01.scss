@@ -21,10 +21,12 @@ body{
         width: 50%;
         display: flex;
         position: relative;
+        filter: blur(0);
+
     }
     &__header{
         height: 60px;
-        background-color: $blackColor;
+        background-color: rgba(37, 37, 37, 0.7);
         position: relative;
         display: flex;
         width: 100%;
@@ -32,7 +34,7 @@ body{
         align-items: center;
         z-index: 3;
         justify-content: center;
-
+        backdrop-filter: blur(8px);
         button{
             z-index: 2;
             background: $greenColor;
@@ -54,6 +56,7 @@ body{
         }
         input{
             height: 40px;
+            filter: blur(0);
             z-index: 3;
             width: 100%;
             font-size: 20px;
@@ -154,6 +157,9 @@ body{
     }
 }
 
+
+
+
 .Pagination{
     width: 100%;
     display: flex;
@@ -177,4 +183,9 @@ body{
     p{
         padding: 10px;
     }
+}
+
+.UnitSearch_hover{
+    background-color: $darkGrayColor;
+    color: white;
 }

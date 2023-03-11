@@ -23,10 +23,13 @@ function renderSelect(filterArr) {
         createDiv.addEventListener("click", () => {
             fetchRepos(arr[i]);
         });
+        createDiv.addEventListener("mouseover", () => {
+            mainInput.value = arr[i];
+        });
+        createDiv2.classList="UnitSearch"
         createDiv2.innerHTML = arr[i];
         createDiv.appendChild(createDiv2);
         history.appendChild(createDiv);
-        
     }
 }
 
