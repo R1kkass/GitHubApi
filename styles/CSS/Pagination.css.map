@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../styles/Pagination.scss","Pagination.css","../../styles/Variables.scss"],"names":[],"mappings":"AAEA;EACI,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;ACDJ;ADEI;EACI,gBAAA;EACA,YAAA;EACA,iCAAA;EACA,WAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,mBAAA;EACA,gBAAA;ACAR;ADCQ;EACI,iCEjBC;ADkBb;ADEI;EACI,aAAA;ACAR","file":"Pagination.css"}

@@ -150,34 +150,4 @@ body {
 .GitHubApi__history div:hover {
   background-color: rgb(53, 53, 53);
   color: white;
-}
-
-.Pagination {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.Pagination button {
-  background: none;
-  color: white;
-  border: 1px solid rgb(5, 255, 38);
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.Pagination button:hover {
-  background-color: rgb(5, 255, 38);
-}
-.Pagination p {
-  padding: 10px;
-}
-
-.UnitSearch_hover {
-  background-color: rgb(53, 53, 53);
-  color: white;
 }/*# sourceMappingURL=01.css.map */
